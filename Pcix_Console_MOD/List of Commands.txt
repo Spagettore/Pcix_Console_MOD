@@ -1,0 +1,43 @@
+List of Commands:
+test [anything] - writes [anything] to console
+addbuf [unit id] [effect power] [name of the effect] - adds buf([name of the effect]) with power([effect power]) to target([unit id])
+addbufall [effect power] [name of the effect] - adds buf([name of the effect]) with power([effect power]) to everyone
+speed [value] - sets game speed
+power - health of everyone becomes 99
+story - calls menu with every cutscene (not recommended to use)
+win - you win immediately
+lose - you lose immediately
+card [value] - everyone gets new emotinal level. If [value] is negative you will chose only red cards
+suddendeath - health of everyone becomes 1
+addcard [sephira name] [card id] [unit id] - target([unit id]) gets card of abnormality([card id]) from choosen floor([sephira name])
+tutoclear - skips every tutorial and opens new floor each use
+emotion [p or pos or positive/negative or neg or n] [value] [unit id] - adds choosen([p or pos or positive/negative or neg or n]) emotinal coin number([value]) to target ([unit id])
+creaturebattle [sephira name] [value] - starts fight with abnormality([[value] from 1) from choosen floor([sephira name])
+invitationbattle [invitation id] - starts choosen invitation
+finalbattle - starts final battle
+breakdamage [enemy/player] [unit id] [value] - choosen target([unit id]) from choosen party([enemy/player]) will get number of stagger resist damage([value])
+damage [enemy/player] [unit id] [value] - choosen target([unit id]) from choosen party([enemy/player]) will get number of damage([value])
+alldamage [enemy/player/All] [unit id] [value] - choosen target([unit id]) from choosen party([enemy/player/All]) will get number of hp and stagger resist damage([value])
+invincible [enemy/player] [unit id] [empty parameters] - choosen target([unit id]) from choosen party([enemy/player]) will be invincible(put any numbers on the empty parameters, does not work usually)
+givecard [int] [int] - unknown commands, tested and nothing changed
+createbook - [book id] [value] - gives number([value]) of choosen book([book id])
+booklevel [string] [int] [int] - no longer used
+recoverHp [enemy/player] [unit id] [value] - heal choosen target ([unit id]) from choosen party([enemy/player]) by([value]) number
+getallitem - Gain max number of useable every pages and card (do not use this while having NoLimits mod installed)
+
+CUSTOM COMMANDS:
+help - print list of all commands to console
+battleprepare - return you to prepare stage
+showids [true/false] - print units ids in their names
+removeunit [player/enemy] [unit id] - remove target([unit id]) from choosen team([player/enemy])
+addunit [unit id] [character id] - add choosen character([character id] check xmls) to choosen slot([unit id]). Only for enemy team
+restorelight [unit id] [value] - target([unit id]) restores light([value])
+drawcards [unit id] [value] - target([unit id]) draws cards([value])
+fullhealth [unit id] - heal all hp and stagger resist of target([unit id])
+revive [unit id] - revive target([unit id])
+
+-Unit ids starts from 0 and id of the lowest unit on the arena will 0
+-You can find invitation id in StageInfo
+-You can find abnormality card id in EmotionCard_ files
+-Sephira names: Malkuth,Yesod,Hod,Netzach,Tiphereth,Gebura,Chesed,Hokma,Binah,Keter
+-Names of the effects: Quickness,SingingMachine,Shock,Blurry,Vulnerable,Weak,Stun,Endurance,Regeneration,Bleeding,Burn,RedShoes,OldLady,Disarm,Paralysis,SnowQueenPower,Strength,Protection,Binding,CurrentCandy
