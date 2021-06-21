@@ -112,12 +112,15 @@ namespace Pcix_Console_MOD
                 case "removeunit":
                     string team = DebugConsoleScript.ParamParser.GetString(cmdParam.paramValue[0]);
                     int index = DebugConsoleScript.ParamParser.GetInteger(cmdParam.paramValue[1]);
-                    if (team == "player")
+                    switch (team)
                     {
-                        RemoveUnit(Faction.Player, index);
-                        break;
+                        case "player":
+                            RemoveUnit(Faction.Player, index);
+                            break;
+                        case "enemy":
+                            RemoveUnit(Faction.Enemy, index);
+                            break;
                     }
-                    RemoveUnit(Faction.Enemy, index);
                     break;
                 case "addunit":
                     index = DebugConsoleScript.ParamParser.GetInteger(cmdParam.paramValue[0]);
